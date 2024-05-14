@@ -46,6 +46,9 @@ html{
 .mt-16{
     margin-top: 16px !important;
 }
+.mt-32{
+    margin-top: 32px !important;
+}
 .pull-right{
     float: right !important;
 }
@@ -57,6 +60,8 @@ html{
     display: inline-block;
     margin-top: 15px;
     border: none;
+    text-align: center;
+    -webkit-appearance: none ;
 
 }
 .btn:hover{
@@ -67,13 +72,13 @@ html{
 }
 /* main */
 #main{
-
+width: 100%;
 }
 
 #header{
-height: 46PX;
-background-color: black;
 position: fixed;
+height: 46px;
+background-color: black;
 top: 0;
 left: 0;
 right: 0;
@@ -129,15 +134,31 @@ line-height: 38px;
 #nav .nav-around-down{
     font-size: 14px;
 }
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .mobile-menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 21px;
-    cursor: pointer;
+ 
 }
+
 #header .search-btn:hover {
+    cursor: pointer;
     background-color: #f44336;
 }
-#header .ti-search{
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color:#000;
+}
+#header .menu-icon,
+#header .search-icon{
     color: #fff;
     font-size: 20px;
     line-height: 46px;
@@ -146,7 +167,7 @@ line-height: 38px;
     position: relative;
    margin-top: 46px;
    padding-top: 50%;
-   background: url('/assets/img/slider1.jpg') top center / cover no-repeat;
+   background: url('../assets/img/slider1.jpg') top center / cover no-repeat;
 }
 #slider .text-content{
     position: absolute;
@@ -165,15 +186,19 @@ line-height: 38px;
 #slider .text-description{
  font-size: 15px;
  margin-top: 25px;
+ text-shadow: 0px 1px #000000;
 }
 #content{
 
 }
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px;
+    padding-right:16px;
+    padding-left: 16px;
 }
 
 #content .section-heading{
@@ -198,14 +223,14 @@ line-height: 38px;
 
 }
 #content .member-list{
-    margin-top: 48px;
+    margin-top: 32px;
     
 }
 
 #content .member-name{
    
 }
-#content .member-avata{
+#content .member-img{
    width: 154px;
     margin-top: 15px;
     border-radius: 4px;
@@ -421,3 +446,4 @@ text-align: center;
         transform: translateY(0);
     }
 }
+
